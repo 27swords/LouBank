@@ -17,6 +17,7 @@
 		4E1CF64228F44C7E00C44792 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF64128F44C7E00C44792 /* CardModel.swift */; };
 		4E1CF64428F44FE100C44792 /* FinanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */; };
 		4E2820F128F5788F00F3B84F /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2820F028F5788F00F3B84F /* InfoTableViewCell.swift */; };
+		4E5F228728FD74DB00C7A485 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F228628FD74DB00C7A485 /* InfoModel.swift */; };
 		4EC43C5628E32EFA000D8CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */; };
 		4EC43C5828E32EFA000D8CE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */; };
 		4EC43C5A28E32EFA000D8CE3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5928E32EFA000D8CE3 /* LoginController.swift */; };
@@ -40,6 +41,7 @@
 		4E1CF64128F44C7E00C44792 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E2820F028F5788F00F3B84F /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		4E5F228628FD74DB00C7A485 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		4EC43C5228E32EFA000D8CE3 /* LouBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LouBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				4E1CF64128F44C7E00C44792 /* CardModel.swift */,
 				4ED2016A28F8332900605D66 /* FinanceModel.swift */,
+				4E5F228628FD74DB00C7A485 /* InfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				4E05F4DC28E5B59B003EBCE4 /* MyCardController.swift in Sources */,
 				4EC8C8A428F6CAED002E54A1 /* UIImageView+Circle.swift in Sources */,
 				4E05F4D628E5A2EF003EBCE4 /* HomeViewController.swift in Sources */,
+				4E5F228728FD74DB00C7A485 /* InfoModel.swift in Sources */,
 				4EC43C5828E32EFA000D8CE3 /* SceneDelegate.swift in Sources */,
 				4E1CF64428F44FE100C44792 /* FinanceCollectionViewCell.swift in Sources */,
 			);

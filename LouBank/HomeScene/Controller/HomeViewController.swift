@@ -111,6 +111,7 @@ class HomeViewController: UIViewController {
     private let infoTableView: UITableView = {
         let view = UITableView()
         view.layer.cornerRadius = 24
+        view.backgroundColor = #colorLiteral(red: 0.2456046343, green: 0.2240151465, blue: 0.2640034854, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -132,6 +133,7 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         avatarImage.makeRounded()
+        
         backgroundView.applyGradient(colors: [#colorLiteral(red: 0.2338522673, green: 0.2122679353, blue: 0.25224787, alpha: 1).cgColor, #colorLiteral(red: 0.1215686426, green: 0.1215686426, blue: 0.1215686426, alpha: 1).cgColor],
                                      startPoint: CGPoint(x: 1, y: 0),
                                      endPoint: CGPoint(x: 0, y: 1))
@@ -196,7 +198,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -222,7 +224,6 @@ private extension HomeViewController {
     }
     
     func setupTableView() {
-        infoTableView.backgroundColor = .yellow
         infoTableView.rowHeight = UITableView.automaticDimension
         infoTableView.separatorStyle = .none
         infoTableView.register(InfoTableViewCell.self, forCellReuseIdentifier: "InfoCell")

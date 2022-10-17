@@ -35,7 +35,7 @@ class FinanceCollectionViewCell: UICollectionViewCell {
     var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont(name: "Helvetica-Bold", size: 14.0)
+        label.font = UIFont(name: "Helvetica", size: 14.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -51,6 +51,7 @@ class FinanceCollectionViewCell: UICollectionViewCell {
     func configureCellFinance(finance: Finance) {
         nameLabel.text = finance.cellName
         iconImageView.image = finance.cellIcon
+        iconView.backgroundColor = finance.colorCells
     }
     
     required init?(coder: NSCoder) {
