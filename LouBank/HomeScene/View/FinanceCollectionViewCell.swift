@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FinanceCollectionViewCell: UICollectionViewCell {
+final class FinanceCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Views
     var financeView: UIView = {

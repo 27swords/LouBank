@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class HomeViewController: UIViewController {
+ 
+final class HomeViewController: UIViewController {
     
     //MARK: - Views
     private lazy var backgroundView: UIView = {
@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     }()
     
     private var contentSize: CGSize {
-        CGSize(width: view.frame.width, height: view.frame.height + 400)
+        CGSize(width: view.frame.width, height: view.frame.height + 100)
     }
     
     private lazy var avatarImage: UIImageView = {
@@ -119,6 +119,7 @@ class HomeViewController: UIViewController {
     //MARK: - Inits
     var cards: CardModel = CardModel()
     var finance: FinanceModel = FinanceModel()
+    var currency: СurrencyModel = СurrencyModel()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -148,7 +149,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cards.card.count
         } else {
             return finance.finance.count
-        }
+        } 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -171,7 +172,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == cardCollectionView {
-            return CGSize(width: 170, height: 200)
+            return CGSize(width: 160, height: 200)
         } else {
             return CGSize(width: 110, height: 110)
         }
@@ -203,10 +204,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as? InfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "СurrencyCell", for: indexPath) as? СurrencyTableViewCell
         else {
             return UITableViewCell()
         }
+        let currency = currency.сurrency[indexPath.row]
+        
+        cell.configureCellCurrency(currency: currency)
         return cell
     }
 }
@@ -220,13 +224,14 @@ private extension HomeViewController {
         financeCollectionView.dataSource = self
         
         cardCollectionView.register(CardsCollectionViewCell.self, forCellWithReuseIdentifier: "CardCell")
+        cardCollectionView.register(AddCardCollectionViewCell.self, forCellWithReuseIdentifier: "AddCardCell")
         financeCollectionView.register(FinanceCollectionViewCell.self, forCellWithReuseIdentifier: "FinanceCell")
     }
     
     func setupTableView() {
         infoTableView.rowHeight = UITableView.automaticDimension
         infoTableView.separatorStyle = .none
-        infoTableView.register(InfoTableViewCell.self, forCellReuseIdentifier: "InfoCell")
+        infoTableView.register(СurrencyTableViewCell.self, forCellReuseIdentifier: "СurrencyCell")
         infoTableView.delegate = self
         infoTableView.dataSource = self
     }

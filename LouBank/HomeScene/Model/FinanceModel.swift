@@ -13,7 +13,7 @@ struct Finance {
     var colorCells: UIColor?
 }
 
-class FinanceModel {
+final class FinanceModel {
     
     var finance = [Finance]()
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardsCollectionViewCell: UICollectionViewCell {
+final class CardsCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Views
     var cardView: UIView = {
@@ -24,9 +24,8 @@ class CardsCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    var salaryLabel: UILabel = {
+    var typeCardLabel: UILabel = {
         let label = UILabel()
-        label.text = "Salary"
         label.textColor = .black
         label.font = UIFont(name: "Helvetica-Light", size: 12.0)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +55,7 @@ class CardsCollectionViewCell: UICollectionViewCell {
         cardView.applyGradient(colors: [#colorLiteral(red: 0.9825150371, green: 0.991471827, blue: 0.8708826303, alpha: 1).cgColor, #colorLiteral(red: 0.9380956888, green: 0.9751893878, blue: 0.5279017091, alpha: 1).cgColor],
                                    startPoint: CGPoint(x: 1, y: 0),
                                    endPoint: CGPoint(x: 0, y: 1))
+        
         self.contentView.layoutIfNeeded()
         
     }
@@ -74,8 +74,8 @@ class CardsCollectionViewCell: UICollectionViewCell {
     func configureCellCard(card: MyCard) {
         moneyLabel.text = card.cash
         numberCardLabel.text = card.numberCard
+        typeCardLabel.text = card.typeCard
     }
-    
 }
 
 //MARK: - Private Extension
@@ -84,7 +84,7 @@ private extension CardsCollectionViewCell {
         contentView.addSubview(cardView)
         
         cardView.addSubview(paySystemImage)
-        cardView.addSubview(salaryLabel)
+        cardView.addSubview(typeCardLabel)
         cardView.addSubview(moneyLabel)
         cardView.addSubview(numberCardLabel)
     }
@@ -102,10 +102,10 @@ private extension CardsCollectionViewCell {
             paySystemImage.widthAnchor.constraint(equalToConstant: 50),
             paySystemImage.heightAnchor.constraint(equalToConstant: 50),
             
-            salaryLabel.topAnchor.constraint(equalTo: paySystemImage.bottomAnchor, constant: 10),
-            salaryLabel.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: 20),
+            typeCardLabel.topAnchor.constraint(equalTo: paySystemImage.bottomAnchor, constant: 10),
+            typeCardLabel.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: 20),
             
-            moneyLabel.topAnchor.constraint(equalTo: salaryLabel.bottomAnchor, constant: 2),
+            moneyLabel.topAnchor.constraint(equalTo: typeCardLabel.bottomAnchor, constant: 2),
             moneyLabel.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: 20),
             moneyLabel.rightAnchor.constraint(equalTo: cardView.rightAnchor),
 
