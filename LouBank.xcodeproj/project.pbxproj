@@ -18,10 +18,11 @@
 		4E1CF64428F44FE100C44792 /* FinanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */; };
 		4E2820F128F5788F00F3B84F /* СurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */; };
 		4E5F228728FD74DB00C7A485 /* СurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F228628FD74DB00C7A485 /* СurrencyModel.swift */; };
-		4E679CE628FEC7B90071A21F /* AddCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CE528FEC7B90071A21F /* AddCardCollectionViewCell.swift */; };
+		4E679CEE28FEE1E50071A21F /* InfoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */; };
+		4E679CF028FEE2230071A21F /* InfoCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */; };
+		4E679CF228FEE2530071A21F /* InfoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */; };
 		4EC43C5628E32EFA000D8CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */; };
 		4EC43C5828E32EFA000D8CE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */; };
-		4EC43C5A28E32EFA000D8CE3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5928E32EFA000D8CE3 /* LoginController.swift */; };
 		4EC43C6028E32EFB000D8CE3 /* LouBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5E28E32EFB000D8CE3 /* LouBank.xcdatamodeld */; };
 		4EC43C6228E32EFD000D8CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */; };
 		4EC43C6528E32EFD000D8CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC43C6328E32EFD000D8CE3 /* LaunchScreen.storyboard */; };
@@ -41,11 +42,12 @@
 		4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СurrencyTableViewCell.swift"; sourceTree = "<group>"; };
 		4E5F228628FD74DB00C7A485 /* СurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СurrencyModel.swift"; sourceTree = "<group>"; };
-		4E679CE528FEC7B90071A21F /* AddCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardViewController.swift; sourceTree = "<group>"; };
+		4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardTableViewCell.swift; sourceTree = "<group>"; };
+		4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EC43C5228E32EFA000D8CE3 /* LouBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LouBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EC43C5928E32EFA000D8CE3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4EC43C5F28E32EFB000D8CE3 /* LouBank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LouBank.xcdatamodel; sourceTree = "<group>"; };
 		4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC43C6428E32EFD000D8CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,7 +125,6 @@
 				4E1CF63F28F4426700C44792 /* CardsCollectionViewCell.swift */,
 				4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */,
 				4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */,
-				4E679CE528FEC7B90071A21F /* AddCardCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +217,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4E679CE928FEE19B0071A21F /* InfoCardScene */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CEC28FEE1BE0071A21F /* Model */,
+				4E679CEB28FEE1BA0071A21F /* View */,
+				4E679CEA28FEE1AF0071A21F /* Controller */,
+			);
+			path = InfoCardScene;
+			sourceTree = "<group>";
+		};
+		4E679CEA28FEE1AF0071A21F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E679CEB28FEE1BA0071A21F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */,
+				4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E679CEC28FEE1BE0071A21F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4EBF244628E478B400C6666A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,10 +282,10 @@
 				4EBF244628E478B400C6666A /* Extensions */,
 				4EC43C6C28E32FEB000D8CE3 /* Application */,
 				4EC43C7028E3302E000D8CE3 /* SupportFiles */,
-				4EC43C7128E3304B000D8CE3 /* LoginScene */,
 				4E05F4C928E59DC3003EBCE4 /* TabBarScene */,
 				4E05F4CF28E5A0D2003EBCE4 /* HomeScene */,
 				4E05F4D928E5B554003EBCE4 /* MyCardScene */,
+				4E679CE928FEE19B0071A21F /* InfoCardScene */,
 				4E05F4DD28E5CB0A003EBCE4 /* BudgetScene */,
 				4E05F4E428E5CBC3003EBCE4 /* ChatScene */,
 				4EC43C6628E32EFD000D8CE3 /* Info.plist */,
@@ -299,38 +334,6 @@
 				4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */,
 			);
 			path = SupportFiles;
-			sourceTree = "<group>";
-		};
-		4EC43C7128E3304B000D8CE3 /* LoginScene */ = {
-			isa = PBXGroup;
-			children = (
-				4EC43C7428E33065000D8CE3 /* Model */,
-				4EC43C7328E3305E000D8CE3 /* View */,
-				4EC43C7228E33058000D8CE3 /* Controller */,
-			);
-			path = LoginScene;
-			sourceTree = "<group>";
-		};
-		4EC43C7228E33058000D8CE3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4EC43C5928E32EFA000D8CE3 /* LoginController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4EC43C7328E3305E000D8CE3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4EC43C7428E33065000D8CE3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,18 +407,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC43C6028E32EFB000D8CE3 /* LouBank.xcdatamodeld in Sources */,
-				4EC43C5A28E32EFA000D8CE3 /* LoginController.swift in Sources */,
 				4ED2016B28F8332900605D66 /* FinanceModel.swift in Sources */,
 				4E05F4C828E59B1C003EBCE4 /* UIView+CAGradient.swift in Sources */,
+				4E679CF028FEE2230071A21F /* InfoCardTableViewCell.swift in Sources */,
 				4E05F4E928E5CBE8003EBCE4 /* ChatController.swift in Sources */,
 				4E1CF64228F44C7E00C44792 /* CardModel.swift in Sources */,
+				4E679CEE28FEE1E50071A21F /* InfoCardViewController.swift in Sources */,
 				4E2820F128F5788F00F3B84F /* СurrencyTableViewCell.swift in Sources */,
 				4EC43C5628E32EFA000D8CE3 /* AppDelegate.swift in Sources */,
+				4E679CF228FEE2530071A21F /* InfoCardCollectionViewCell.swift in Sources */,
 				4E05F4CE28E59EB7003EBCE4 /* TabBarViewController.swift in Sources */,
 				4E05F4E328E5CB3B003EBCE4 /* BudgetController.swift in Sources */,
 				4E1CF64028F4426700C44792 /* CardsCollectionViewCell.swift in Sources */,
 				4E05F4DC28E5B59B003EBCE4 /* MyCardController.swift in Sources */,
-				4E679CE628FEC7B90071A21F /* AddCardCollectionViewCell.swift in Sources */,
 				4EC8C8A428F6CAED002E54A1 /* UIImageView+Circle.swift in Sources */,
 				4E05F4D628E5A2EF003EBCE4 /* HomeViewController.swift in Sources */,
 				4E5F228728FD74DB00C7A485 /* СurrencyModel.swift in Sources */,

@@ -5,7 +5,7 @@
 //  Created by Alexander Chervoncev on 17.10.22.
 //
 
-import UIKit
+import Foundation
 
 struct Сurrency {
     var buyDollar: String

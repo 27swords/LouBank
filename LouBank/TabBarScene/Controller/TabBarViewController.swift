@@ -20,15 +20,10 @@ final class TabBarViewController: UITabBarController {
 private extension TabBarViewController {
     
     func setupTabBar() {
-        navigationItem.setHidesBackButton(true, animated: true)
-        
         tabBar.backgroundColor = #colorLiteral(red: 0.1333333254, green: 0.1333333254, blue: 0.1333333254, alpha: 1)
         tabBar.unselectedItemTintColor = .white
         tabBar.tintColor = #colorLiteral(red: 0.9443746209, green: 0.9760175347, blue: 0.5466615558, alpha: 1)
         tabBar.layer.cornerRadius = 12
-        //походу костыль
-        tabBar.scrollEdgeAppearance = nil
-        tabBar.standardAppearance.backgroundEffect = .none
     }
         
     func makeTabItems() {

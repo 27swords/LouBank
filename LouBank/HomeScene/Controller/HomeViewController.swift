@@ -12,23 +12,15 @@ final class HomeViewController: UIViewController {
     //MARK: - Views
     private lazy var backgroundView: UIView = {
         let view = UIView()
-        view.frame.size = contentSize
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-        
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.contentSize = contentSize
-        scrollView.frame = view.bounds
-        scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.bounces = false
-        return scrollView
-    }()
     
-    private var contentSize: CGSize {
-        CGSize(width: view.frame.width, height: view.frame.height + 100)
-    }
+    private lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        return scroll
+    }()
     
     private lazy var avatarImage: UIImageView = {
         let image = UIImageView()
@@ -83,9 +75,7 @@ final class HomeViewController: UIViewController {
     //MARK: - CollectionVeiws
     private let cardCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 1
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 1
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
@@ -96,9 +86,7 @@ final class HomeViewController: UIViewController {
     
     private let financeCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 1
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 1
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
@@ -128,7 +116,8 @@ final class HomeViewController: UIViewController {
         setupConstraints()
         setupCollectionViews()
         setupTableView()
-        configureTabBar()
+        configureNavItems()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -193,13 +182,21 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == cardCollectionView {
+            let vc = InfoCardViewController()
+            vc.cardId = cards
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 //MARK: - Extensions TableView
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return currency.сurrency.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -224,7 +221,6 @@ private extension HomeViewController {
         financeCollectionView.dataSource = self
         
         cardCollectionView.register(CardsCollectionViewCell.self, forCellWithReuseIdentifier: "CardCell")
-        cardCollectionView.register(AddCardCollectionViewCell.self, forCellWithReuseIdentifier: "AddCardCell")
         financeCollectionView.register(FinanceCollectionViewCell.self, forCellWithReuseIdentifier: "FinanceCell")
     }
     
@@ -236,14 +232,12 @@ private extension HomeViewController {
         infoTableView.dataSource = self
     }
     
-    func configureTabBar() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
+    func configureNavItems() {
     }
     
     func setupViews() {
-        view.addSubview(scrollView)
+        view.addSubview(backgroundView)
         
-        scrollView.addSubview(backgroundView)
         
         backgroundView.addSubview(balanceStackView)
         backgroundView.addSubview(avatarImage)
@@ -260,44 +254,44 @@ private extension HomeViewController {
     //MARK: - Constraints
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            backgroundView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
-            backgroundView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             avatarImage.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 50),
             avatarImage.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 15),
-            
+
             avatarImage.widthAnchor.constraint(equalToConstant: 50),
             avatarImage.heightAnchor.constraint(equalToConstant: 50),
-            
+
             balanceStackView.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 30),
             balanceStackView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 20),
-            
+
             searchButton.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 150),
             searchButton.leftAnchor.constraint(equalTo: balanceStackView.rightAnchor),
             searchButton.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -30),
-            
+
             searchButton.widthAnchor.constraint(equalToConstant: 30),
             searchButton.heightAnchor.constraint(equalToConstant: 30),
-            
+
             cardCollectionView.topAnchor.constraint(equalTo: balanceStackView.bottomAnchor, constant: 30),
             cardCollectionView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
             cardCollectionView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
-            
+
             cardCollectionView.heightAnchor.constraint(equalToConstant: 200),
-            
+
             financeLabel.topAnchor.constraint(equalTo: cardCollectionView.bottomAnchor, constant: 30),
             financeLabel.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 20),
             financeLabel.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
-            
+
             financeCollectionView.topAnchor.constraint(equalTo: financeLabel.bottomAnchor, constant: 10),
             financeCollectionView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
             financeCollectionView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
 
             financeCollectionView.heightAnchor.constraint(equalToConstant: 150),
-            
-            infoTableView.topAnchor.constraint(equalTo: financeCollectionView.bottomAnchor, constant: 30),
+
+            infoTableView.topAnchor.constraint(equalTo: financeCollectionView.bottomAnchor),
             infoTableView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
             infoTableView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
             infoTableView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
