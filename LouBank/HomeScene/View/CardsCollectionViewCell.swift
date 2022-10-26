@@ -19,7 +19,6 @@ final class CardsCollectionViewCell: UICollectionViewCell {
     
     var paySystemImage: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "VisaImage")
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -75,6 +74,7 @@ final class CardsCollectionViewCell: UICollectionViewCell {
         moneyLabel.text = card.cash
         numberCardLabel.text = card.numberCard
         typeCardLabel.text = card.typeCard
+        paySystemImage.image = card.paySystem
     }
 }
 

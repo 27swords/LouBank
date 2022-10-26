@@ -12,15 +12,23 @@ final class HomeViewController: UIViewController {
     //MARK: - Views
     private lazy var backgroundView: UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.frame.size = contentSize
         return view
     }()
     
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
-        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.contentSize = contentSize
+        scroll.frame = view.bounds
+        scroll.contentInsetAdjustmentBehavior = .never
+        scroll.showsVerticalScrollIndicator = false
+        scroll.bounces = false
         return scroll
     }()
+    
+    private var contentSize: CGSize {
+        CGSize(width: view.frame.width, height: view.frame.height + 400)
+    }
     
     private lazy var avatarImage: UIImageView = {
         let image = UIImageView()
@@ -116,8 +124,6 @@ final class HomeViewController: UIViewController {
         setupConstraints()
         setupCollectionViews()
         setupTableView()
-        configureNavItems()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -232,12 +238,10 @@ private extension HomeViewController {
         infoTableView.dataSource = self
     }
     
-    func configureNavItems() {
-    }
-    
     func setupViews() {
-        view.addSubview(backgroundView)
+        view.addSubview(scrollView)
         
+        scrollView.addSubview(backgroundView)
         
         backgroundView.addSubview(balanceStackView)
         backgroundView.addSubview(avatarImage)
@@ -254,10 +258,6 @@ private extension HomeViewController {
     //MARK: - Constraints
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            backgroundView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             avatarImage.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 50),
             avatarImage.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 15),

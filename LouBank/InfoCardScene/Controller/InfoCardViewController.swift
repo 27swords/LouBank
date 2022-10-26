@@ -15,14 +15,21 @@ final class InfoCardViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private lazy var pageControl: UIPageControl = {
+        let control = UIPageControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        control.backgroundColor = .clear
+        control.tintColor = .gray
+        control.currentPageIndicatorTintColor = #colorLiteral(red: 0.7224219441, green: 0.7664391398, blue: 0.3638426065, alpha: 1)
+        return control
+    }()
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 1
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 1
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +54,7 @@ final class InfoCardViewController: UIViewController {
         setupCollectionView()
         setupTableView()
         setupNavigationVC()
+        configurePageControl()
     }
     
     override func viewDidLayoutSubviews() {
@@ -60,12 +68,35 @@ final class InfoCardViewController: UIViewController {
 //MARK: - CollectionView extension
 extension InfoCardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    //MARK: - CollectionView Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return cardId.card.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? InfoCardCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+        let cards = cardId.card[indexPath.row]
+
+        cell.configureCellCard(card: cards)
+        
+        return cell
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+            
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControl.currentPage = indexPath.row
     }
 }
 
@@ -77,7 +108,12 @@ extension InfoCardViewController: UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? InfoCardTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        return cell
     }
 }
 
@@ -100,11 +136,18 @@ private extension InfoCardViewController {
         
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         title = "Ваши карты"
-        
     }
-    
+
     func setupViews() {
         view.addSubview(backgroundView)
+        backgroundView.addSubview(collectionView)
+        backgroundView.addSubview(pageControl)
+        backgroundView.addSubview(tableView)
+    }
+    
+    func configurePageControl() {
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = cardId.card.count
     }
     
     func setupConstraints() {
@@ -113,6 +156,23 @@ private extension InfoCardViewController {
             backgroundView.leftAnchor.constraint(equalTo: view.leftAnchor),
             backgroundView.rightAnchor.constraint(equalTo: view.rightAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 100),
+            collectionView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
+            
+            collectionView.heightAnchor.constraint(equalToConstant: 250),
+            
+            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            pageControl.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
+            pageControl.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
+            
+            pageControl.heightAnchor.constraint(equalToConstant: 20),
+            
+            tableView.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 30),
+            tableView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
         ])
     }
 }

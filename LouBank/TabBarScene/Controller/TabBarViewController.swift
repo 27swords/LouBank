@@ -24,6 +24,8 @@ private extension TabBarViewController {
         tabBar.unselectedItemTintColor = .white
         tabBar.tintColor = #colorLiteral(red: 0.9443746209, green: 0.9760175347, blue: 0.5466615558, alpha: 1)
         tabBar.layer.cornerRadius = 12
+        tabBar.scrollEdgeAppearance = nil
+        tabBar.standardAppearance.backgroundEffect = .none
     }
         
     func makeTabItems() {
@@ -37,10 +39,10 @@ private extension TabBarViewController {
         guard let bydgetIcon = UIImage(named: "BudgetIcon") else { return }
         guard let chatIcon = UIImage(named: "ChatIcon") else { return }
         
-        let homeScene = createNavController(for: home, title: "", image: homeIcon)
-        let myCardScene = createNavController(for: myCards, title: "", image: myCardIcon)
-        let budgetScene = createNavController(for: budget, title: "", image: bydgetIcon)
-        let chatSceme = createNavController(for: chat, title: "", image: chatIcon)
+        let homeScene = createNavController(for: home, title: "Главная", image: homeIcon)
+        let myCardScene = createNavController(for: myCards, title: "Карты", image: myCardIcon)
+        let budgetScene = createNavController(for: budget, title: "Покупки", image: bydgetIcon)
+        let chatSceme = createNavController(for: chat, title: "Чат", image: chatIcon)
         
         viewControllers = [homeScene, budgetScene, myCardScene, chatSceme]
     }
