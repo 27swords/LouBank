@@ -38,7 +38,9 @@ final class InfoCardViewController: UIViewController {
     
     private let tableView: UITableView = {
         let view = UITableView()
-        view.backgroundColor = .green
+        view.backgroundColor = #colorLiteral(red: 0.2472881377, green: 0.2239129543, blue: 0.2614909708, alpha: 1)
+        view.layer.cornerRadius = 25
+        view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -80,7 +82,7 @@ extension InfoCardViewController: UICollectionViewDataSource, UICollectionViewDe
             return UICollectionViewCell()
         }
         
-        let cards = cardId.card[indexPath.row]
+        let cards = cardId.card[indexPath.item]
 
         cell.configureCellCard(card: cards)
         
@@ -104,7 +106,7 @@ extension InfoCardViewController: UICollectionViewDataSource, UICollectionViewDe
 extension InfoCardViewController: UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return cardId.card.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,6 +115,10 @@ extension InfoCardViewController: UITableViewDelegate, UITableViewDataSource  {
         else {
             return UITableViewCell()
         }
+        let cards = cardId.card[indexPath.row]
+        
+        cell.configureTransferCell(transfer: cards)
+        
         return cell
     }
 }

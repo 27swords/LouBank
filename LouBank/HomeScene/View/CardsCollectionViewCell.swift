@@ -71,7 +71,7 @@ final class CardsCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Methods
     func configureCellCard(card: MyCard) {
-        moneyLabel.text = card.cash
+        moneyLabel.text = "$" + card.cash
         numberCardLabel.text = card.numberCard
         typeCardLabel.text = card.typeCard
         paySystemImage.image = card.paySystem

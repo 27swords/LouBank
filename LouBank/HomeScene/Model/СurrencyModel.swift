@@ -22,10 +22,10 @@ final class СurrencyModel {
     init() { сurrencySetup() }
     
     func сurrencySetup() {
-        let exchangeRate = Сurrency(buyDollar: "$ 34.34",
-                                    seliDollar: "$ 44.34",
-                                    byuEuro: "$ 54.34",
-                                    seliEuro: "$ 64.34")
+        let exchangeRate = Сurrency(buyDollar: "34.34",
+                                    seliDollar: "44.34",
+                                    byuEuro: "54.34",
+                                    seliEuro: "64.34")
         
         self.сurrency = [exchangeRate]
     }
