@@ -139,9 +139,9 @@ private extension InfoCardViewController {
     
     func setupNavigationVC() {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        
+    
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        title = "Ваши карты"
+        title = "Платежи"
     }
 
     func setupViews() {

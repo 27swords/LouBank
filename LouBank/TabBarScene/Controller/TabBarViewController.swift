@@ -31,20 +31,14 @@ private extension TabBarViewController {
     func makeTabItems() {
         let home = HomeViewController()
         let myCards = MyCardController()
-        let budget = BudgetController()
-        let chat = ChatController()
         
         guard let homeIcon = UIImage(named: "HomeIcon") else { return }
         guard let myCardIcon = UIImage(named: "MyCardIcon") else { return }
-        guard let bydgetIcon = UIImage(named: "BudgetIcon") else { return }
-        guard let chatIcon = UIImage(named: "ChatIcon") else { return }
         
         let homeScene = createNavController(for: home, title: "Главная", image: homeIcon)
         let myCardScene = createNavController(for: myCards, title: "Карты", image: myCardIcon)
-        let budgetScene = createNavController(for: budget, title: "Покупки", image: bydgetIcon)
-        let chatSceme = createNavController(for: chat, title: "Чат", image: chatIcon)
         
-        viewControllers = [homeScene, budgetScene, myCardScene, chatSceme]
+        viewControllers = [homeScene, myCardScene]
     }
     
     func createNavController(for rootViewController: UIViewController,
