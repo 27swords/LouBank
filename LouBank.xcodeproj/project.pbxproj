@@ -7,25 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E05F4C828E59B1C003EBCE4 /* UIView+CAGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05F4C728E59B1C003EBCE4 /* UIView+CAGradient.swift */; };
+		4E05F4CE28E59EB7003EBCE4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05F4CD28E59EB7003EBCE4 /* TabBarViewController.swift */; };
+		4E05F4D628E5A2EF003EBCE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05F4D528E5A2EF003EBCE4 /* HomeViewController.swift */; };
+		4E05F4DC28E5B59B003EBCE4 /* MyCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05F4DB28E5B59B003EBCE4 /* MyCardController.swift */; };
+		4E1CF64028F4426700C44792 /* CardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF63F28F4426700C44792 /* CardsCollectionViewCell.swift */; };
+		4E1CF64228F44C7E00C44792 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF64128F44C7E00C44792 /* CardModel.swift */; };
+		4E1CF64428F44FE100C44792 /* FinanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */; };
+		4E2820F128F5788F00F3B84F /* СurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */; };
+		4E5F228728FD74DB00C7A485 /* СurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F228628FD74DB00C7A485 /* СurrencyModel.swift */; };
+		4E679CEE28FEE1E50071A21F /* InfoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */; };
+		4E679CF028FEE2230071A21F /* InfoCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */; };
+		4E679CF228FEE2530071A21F /* InfoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */; };
+		4EA4331A291122C1001E5B49 /* MyCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA43319291122C1001E5B49 /* MyCardTableViewCell.swift */; };
 		4EC43C5628E32EFA000D8CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */; };
 		4EC43C5828E32EFA000D8CE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */; };
-		4EC43C5A28E32EFA000D8CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5928E32EFA000D8CE3 /* ViewController.swift */; };
-		4EC43C5D28E32EFA000D8CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC43C5B28E32EFA000D8CE3 /* Main.storyboard */; };
 		4EC43C6028E32EFB000D8CE3 /* LouBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EC43C5E28E32EFB000D8CE3 /* LouBank.xcdatamodeld */; };
 		4EC43C6228E32EFD000D8CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */; };
 		4EC43C6528E32EFD000D8CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC43C6328E32EFD000D8CE3 /* LaunchScreen.storyboard */; };
+		4EC8C8A428F6CAED002E54A1 /* UIImageView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8C8A328F6CAED002E54A1 /* UIImageView+Circle.swift */; };
+		4ED2016B28F8332900605D66 /* FinanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2016A28F8332900605D66 /* FinanceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E05F4C728E59B1C003EBCE4 /* UIView+CAGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CAGradient.swift"; sourceTree = "<group>"; };
+		4E05F4CD28E59EB7003EBCE4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4E05F4D528E5A2EF003EBCE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4E05F4DB28E5B59B003EBCE4 /* MyCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardController.swift; sourceTree = "<group>"; };
+		4E1CF63F28F4426700C44792 /* CardsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E1CF64128F44C7E00C44792 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СurrencyTableViewCell.swift"; sourceTree = "<group>"; };
+		4E5F228628FD74DB00C7A485 /* СurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СurrencyModel.swift"; sourceTree = "<group>"; };
+		4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardViewController.swift; sourceTree = "<group>"; };
+		4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardTableViewCell.swift; sourceTree = "<group>"; };
+		4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EA43319291122C1001E5B49 /* MyCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardTableViewCell.swift; sourceTree = "<group>"; };
 		4EC43C5228E32EFA000D8CE3 /* LouBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LouBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EC43C5928E32EFA000D8CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4EC43C5C28E32EFA000D8CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EC43C5F28E32EFB000D8CE3 /* LouBank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LouBank.xcdatamodel; sourceTree = "<group>"; };
 		4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC43C6428E32EFD000D8CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EC43C6628E32EFD000D8CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EC8C8A328F6CAED002E54A1 /* UIImageView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Circle.swift"; sourceTree = "<group>"; };
+		4ED2016A28F8332900605D66 /* FinanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +65,144 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E05F4C928E59DC3003EBCE4 /* TabBarScene */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4CA28E59DD6003EBCE4 /* Model */,
+				4E05F4CB28E59DDE003EBCE4 /* View */,
+				4E05F4CC28E59DE3003EBCE4 /* Controller */,
+			);
+			path = TabBarScene;
+			sourceTree = "<group>";
+		};
+		4E05F4CA28E59DD6003EBCE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E05F4CB28E59DDE003EBCE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E05F4CC28E59DE3003EBCE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4CD28E59EB7003EBCE4 /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E05F4CF28E5A0D2003EBCE4 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4D228E5A2C4003EBCE4 /* Model */,
+				4E05F4D328E5A2CA003EBCE4 /* View */,
+				4E05F4D428E5A2D0003EBCE4 /* Controller */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		4E05F4D228E5A2C4003EBCE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E1CF64128F44C7E00C44792 /* CardModel.swift */,
+				4ED2016A28F8332900605D66 /* FinanceModel.swift */,
+				4E5F228628FD74DB00C7A485 /* СurrencyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E05F4D328E5A2CA003EBCE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E1CF63F28F4426700C44792 /* CardsCollectionViewCell.swift */,
+				4E1CF64328F44FE100C44792 /* FinanceCollectionViewCell.swift */,
+				4E2820F028F5788F00F3B84F /* СurrencyTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E05F4D428E5A2D0003EBCE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4D528E5A2EF003EBCE4 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E05F4D928E5B554003EBCE4 /* MyCardScene */ = {
+			isa = PBXGroup;
+			children = (
+				4EA433182911229B001E5B49 /* View */,
+				4E05F4DA28E5B587003EBCE4 /* Controller */,
+			);
+			path = MyCardScene;
+			sourceTree = "<group>";
+		};
+		4E05F4DA28E5B587003EBCE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4DB28E5B59B003EBCE4 /* MyCardController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E679CE928FEE19B0071A21F /* InfoCardScene */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CEC28FEE1BE0071A21F /* Model */,
+				4E679CEB28FEE1BA0071A21F /* View */,
+				4E679CEA28FEE1AF0071A21F /* Controller */,
+			);
+			path = InfoCardScene;
+			sourceTree = "<group>";
+		};
+		4E679CEA28FEE1AF0071A21F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CED28FEE1E50071A21F /* InfoCardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E679CEB28FEE1BA0071A21F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E679CEF28FEE2230071A21F /* InfoCardTableViewCell.swift */,
+				4E679CF128FEE2530071A21F /* InfoCardCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E679CEC28FEE1BE0071A21F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EA433182911229B001E5B49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EA43319291122C1001E5B49 /* MyCardTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EBF244628E478B400C6666A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E05F4C728E59B1C003EBCE4 /* UIView+CAGradient.swift */,
+				4EC8C8A328F6CAED002E54A1 /* UIImageView+Circle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4EC43C4928E32EFA000D8CE3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +222,59 @@
 		4EC43C5428E32EFA000D8CE3 /* LouBank */ = {
 			isa = PBXGroup;
 			children = (
-				4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */,
-				4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */,
-				4EC43C5928E32EFA000D8CE3 /* ViewController.swift */,
-				4EC43C5B28E32EFA000D8CE3 /* Main.storyboard */,
-				4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */,
-				4EC43C6328E32EFD000D8CE3 /* LaunchScreen.storyboard */,
+				4EBF244628E478B400C6666A /* Extensions */,
+				4EC43C6C28E32FEB000D8CE3 /* Application */,
+				4EC43C7028E3302E000D8CE3 /* SupportFiles */,
+				4E05F4C928E59DC3003EBCE4 /* TabBarScene */,
+				4E05F4CF28E5A0D2003EBCE4 /* HomeScene */,
+				4E05F4D928E5B554003EBCE4 /* MyCardScene */,
+				4E679CE928FEE19B0071A21F /* InfoCardScene */,
 				4EC43C6628E32EFD000D8CE3 /* Info.plist */,
 				4EC43C5E28E32EFB000D8CE3 /* LouBank.xcdatamodeld */,
 			);
 			path = LouBank;
+			sourceTree = "<group>";
+		};
+		4EC43C6C28E32FEB000D8CE3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4EC43C6D28E32FF7000D8CE3 /* Model */,
+				4EC43C6E28E33001000D8CE3 /* VIew */,
+				4EC43C6F28E3300A000D8CE3 /* Controller */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4EC43C6D28E32FF7000D8CE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EC43C6E28E33001000D8CE3 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				4EC43C6328E32EFD000D8CE3 /* LaunchScreen.storyboard */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		4EC43C6F28E3300A000D8CE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EC43C5528E32EFA000D8CE3 /* AppDelegate.swift */,
+				4EC43C5728E32EFA000D8CE3 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4EC43C7028E3302E000D8CE3 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4EC43C6128E32EFD000D8CE3 /* Assets.xcassets */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +337,6 @@
 			files = (
 				4EC43C6528E32EFD000D8CE3 /* LaunchScreen.storyboard in Resources */,
 				4EC43C6228E32EFD000D8CE3 /* Assets.xcassets in Resources */,
-				4EC43C5D28E32EFA000D8CE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,23 +348,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC43C6028E32EFB000D8CE3 /* LouBank.xcdatamodeld in Sources */,
-				4EC43C5A28E32EFA000D8CE3 /* ViewController.swift in Sources */,
+				4ED2016B28F8332900605D66 /* FinanceModel.swift in Sources */,
+				4E05F4C828E59B1C003EBCE4 /* UIView+CAGradient.swift in Sources */,
+				4E679CF028FEE2230071A21F /* InfoCardTableViewCell.swift in Sources */,
+				4E1CF64228F44C7E00C44792 /* CardModel.swift in Sources */,
+				4E679CEE28FEE1E50071A21F /* InfoCardViewController.swift in Sources */,
+				4E2820F128F5788F00F3B84F /* СurrencyTableViewCell.swift in Sources */,
 				4EC43C5628E32EFA000D8CE3 /* AppDelegate.swift in Sources */,
+				4E679CF228FEE2530071A21F /* InfoCardCollectionViewCell.swift in Sources */,
+				4E05F4CE28E59EB7003EBCE4 /* TabBarViewController.swift in Sources */,
+				4E1CF64028F4426700C44792 /* CardsCollectionViewCell.swift in Sources */,
+				4EA4331A291122C1001E5B49 /* MyCardTableViewCell.swift in Sources */,
+				4E05F4DC28E5B59B003EBCE4 /* MyCardController.swift in Sources */,
+				4EC8C8A428F6CAED002E54A1 /* UIImageView+Circle.swift in Sources */,
+				4E05F4D628E5A2EF003EBCE4 /* HomeViewController.swift in Sources */,
+				4E5F228728FD74DB00C7A485 /* СurrencyModel.swift in Sources */,
 				4EC43C5828E32EFA000D8CE3 /* SceneDelegate.swift in Sources */,
+				4E1CF64428F44FE100C44792 /* FinanceCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4EC43C5B28E32EFA000D8CE3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EC43C5C28E32EFA000D8CE3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4EC43C6328E32EFD000D8CE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,9 +505,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LouBank/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lou bank";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,9 +533,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LouBank/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lou bank";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
